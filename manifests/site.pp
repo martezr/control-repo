@@ -29,3 +29,7 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+
+node agent.localdomain {
+  include nginx
+}
