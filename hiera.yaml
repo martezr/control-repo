@@ -1,12 +1,12 @@
 ---
 version: 5
-
 defaults:
-  datadir: "data"
-
+  datadir: data
 hierarchy:
-  - name: "Yaml backend"
-    data_hash: yaml_data
+  - name: "Normal data"
+    data_hash: yaml_data # Standard yaml backend
     paths:
       - "nodes/%{trusted.certname}.yaml"
+      - "roles/%{trusted.extensions.pp_role}.yaml"
+      - "os/%{facts.os.family}.yaml"
       - "common.yaml"
